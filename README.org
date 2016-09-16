@@ -2,24 +2,35 @@
 
 Nothing special, just a multiplexer. The fun stuff happens later.
 
-Create the directories =uploads= and =tests=. Place tests for a numerically
-indexed assignment under =tests=. The entry program must be called =run.sh=,
-and must be executable. For instance, =tests/0/run.sh=.
-
 Starts a Go server at port =8080=, and writes an error log to =error.log=.
 
-For configuring the files which must be there, and which could be there, see
-=files.json=.
+The web server is _completely serial_. Maybe this is a feature?
+
+** How-To
+
+Create the directories =uploads= and =tests=. Place tests for a numerically
+indexed assignment under =tests=. The entry program must be called =run.sh=,
+and must be executable. For instance, [[tests/0/run.sh][=tests/0/run.sh=]].
+
+The server will upload the files given in one request to a temporary directory
+under =./uploads= and call the relevant =./tests/<id>/run.sh= for a request
+made to =localhost:8080/grade/<id>=. The temporary directory is purged
+subsequently.
+
+To configure which form variables are to be named what in the resulting
+directory, and for controling which files *must* be there, see
+[[files.json][=files.json=]]. You can also just check this at a later stage,
+somewhere under your =run.sh=.
 
 * Testing
 
-To test, start the process in one terminal:
+Go ahead and run it in one terminal:
 
 #+BEGIN_SRC shell
 go run main.go
 #+END_SRC
 
-And in another:
+And curl it in another:
 
 #+BEGIN_SRC shell
 curl -F src=@src.zip -F report=@report.pdf -F group=@group.txt http://localhost:8080/grade/0
