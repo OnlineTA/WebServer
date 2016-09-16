@@ -38,6 +38,8 @@ curl -F src=@src.zip -F report=@report.pdf -F group=@group.txt http://localhost:
 
 ** Deploying
 
+Change [[deploy.conf]].
+
 #+BEGIN_SRC shell
 ./build.sh # Builds a statically-linked executable called OnlineTA.
 ./deploy.sh # scp's the executable to whatever host you specified in deploy.conf
