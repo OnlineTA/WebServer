@@ -10,7 +10,7 @@ The web server is _completely serial_. Maybe this is a feature?
 
 Create the directories =uploads= and =tests=. Place tests for a numerically
 indexed assignment under =tests=. The entry program must be called =run.sh=,
-and must be executable. For instance, [[tests/0/run.sh][=tests/0/run.sh=]].
+and must be executable. For instance, [[tests/0/run.sh]].
 
 The server will upload the files given in one request to a temporary directory
 under =./uploads= and call the relevant =./tests/<id>/run.sh= for a request
@@ -18,9 +18,8 @@ made to =localhost:8080/grade/<id>=. The temporary directory is purged
 subsequently.
 
 To configure which form variables are to be named what in the resulting
-directory, and for controling which files *must* be there, see
-[[files.json][=files.json=]]. You can also just check this at a later stage,
-somewhere under your =run.sh=.
+directory, and for controling which files *must* be there, see [[files.json]].
+You can also just check this at a later stage, somewhere under your =run.sh=.
 
 ** Testing
 
