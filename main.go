@@ -193,7 +193,6 @@ func main() {
   if err != nil {
     panic(err)
   }
-  fmt.Println(conf)
 
   errorLog, err := os.OpenFile("error.log",
     os.O_CREATE | os.O_APPEND | os.O_WRONLY, 0600)
