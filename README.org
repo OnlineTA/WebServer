@@ -1,4 +1,4 @@
-#+TITLE: OnlineTA Web Server
+* OnlineTA Web Server
 
 Nothing special, just a multiplexer. The fun stuff happens later.
 
@@ -22,7 +22,7 @@ directory, and for controling which files *must* be there, see
 [[files.json][=files.json=]]. You can also just check this at a later stage,
 somewhere under your =run.sh=.
 
-* Testing
+** Testing
 
 Go ahead and run it in one terminal:
 
@@ -36,7 +36,7 @@ And curl it in another:
 curl -F src=@src.zip -F report=@report.pdf -F group=@group.txt http://localhost:8080/grade/0
 #+END_SRC
 
-* Deploying
+** Deploying
 
 #+BEGIN_SRC shell
 ./build.sh # Builds a statically-linked executable called OnlineTA.
