@@ -1,0 +1,12 @@
+#+TITLE: OnlineTA Web Server
+
+Nothing special, just a multiplexer. The fun stuff happens later.
+
+Create the directories =uploads= and =tests=. Place tests for a numerically
+indexed assignment under =tests=. The entry program must be called =run.sh=,
+and must be executable. For instance, =tests/0/run.sh=.
+
+Starts a Go server at port =8080=, and writes an error log to =error.log=.
+
+For configuring the files which must be there, and which could be there, see
+=files.json=.

@@ -1,0 +1,9 @@
+{
+  "require": [
+    { "name": "src", "filename": "src.zip" }
+  ],
+  "try": [
+    { "name": "report", "filename": "report.pdf" },
+    { "name": "group", "filename": "group.txt" }
+  ]
+}
