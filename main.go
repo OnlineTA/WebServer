@@ -182,8 +182,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
   }
 }
 
-func main() {
-
+func readConf() {
   file, err := os.Open("files.json")
   if err != nil {
     panic(err)
@@ -193,6 +192,10 @@ func main() {
   if err != nil {
     panic(err)
   }
+}
+
+func main() {
+  readConf()
 
   errorLog, err := os.OpenFile("error.log",
     os.O_CREATE | os.O_APPEND | os.O_WRONLY, 0600)
