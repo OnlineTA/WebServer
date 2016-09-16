@@ -2,4 +2,4 @@
 
 set -euo pipefail
 
-go build --ldflags '-linkmode external -extldflags "-static"'
+go build -o OnlineTA --ldflags '-linkmode external -extldflags "-static"'

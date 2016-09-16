@@ -10,3 +10,24 @@ Starts a Go server at port =8080=, and writes an error log to =error.log=.
 
 For configuring the files which must be there, and which could be there, see
 =files.json=.
+
+* Testing
+
+To test, start the process in one terminal:
+
+#+BEGIN_SRC shell
+go run main.go
+#+END_SRC
+
+And in another:
+
+#+BEGIN_SRC shell
+curl -F src=@src.zip -F report=@report.pdf -F group=@group.txt http://localhost:8080/grade/0
+#+END_SRC
+
+* Deploying
+
+#+BEGIN_SRC shell
+./build.sh # Builds a statically-linked executable.
+./deploy.sh # scp's to whatever host you specified in deploy.conf
+#+END_SRC
