@@ -19,7 +19,8 @@ subsequently.
 
 To configure which form variables are to be named what in the resulting
 directory, and for controling which files *must* be there, see [[files.json]].
-You can also just check this at a later stage, somewhere under your =run.sh=.
+Of course, you can also check the presence of important files at a later stage,
+somewhere under your =run.sh=.
 
 ** Testing
 
