@@ -4,4 +4,4 @@ set -euo pipefail
 
 . deploy.conf
 
-rsync -av OnlineTA www onlineta@${HOST}:~onlineta/
+rsync -av OnlineTA files.json www hostdeploy.sh ${USER}@${HOST}:~${USER}/
