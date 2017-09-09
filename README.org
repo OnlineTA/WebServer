@@ -4,8 +4,6 @@ Nothing special, just a multiplexer. The fun stuff happens later.
 
 Starts a Go server at port =8080=, and writes an error log to =error.log=.
 
-The web server is _completely serial_. Maybe this is a feature?
-
 ** How-To
 
 Create the directories =uploads= and =tests=. Place tests for a numerically
